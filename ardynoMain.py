@@ -41,6 +41,17 @@ class Ardyno(Frame):
         testControlFrame = Frame(self.parent, borderwidth=2,relief=GROOVE)
         testControlFrame.pack(side=LEFT, fill=BOTH)
 
+        SAEcorrectionFrame = Frame(testControlFrame, borderwidth=2, relief=GROOVE)
+        Label(SAEcorrectionFrame,text="Ambient Temp [C]").grid(row=1,column=0,padx=5)
+        Label(SAEcorrectionFrame,relief=SUNKEN,width=7).grid(row=2,column=0,padx=5,pady=5)
+        Label(SAEcorrectionFrame,text="Ambient Pressure [Kpa]").grid(row=3,column=0,padx=5)
+        Label(SAEcorrectionFrame,relief=SUNKEN,width=7).grid(row=4,column=0,padx=5,pady=5)
+        Label(SAEcorrectionFrame,text="SAE Correction Factor").grid(row=5,column=0,padx=5)
+        Label(SAEcorrectionFrame,relief=SUNKEN,width=7).grid(row=6,column=0,padx=5,pady=5)
+        Button(SAEcorrectionFrame,text="Correction Factor").grid(row=7,column=0,padx=5,pady=5,columnspan=2,rowspan=2)
+        SAEcorrectionFrame.pack(side=TOP, fill=BOTH)
+      
+
         graphCanvas = Canvas(self.parent)
         graphCanvas.pack(side=TOP, fill=BOTH)
 
