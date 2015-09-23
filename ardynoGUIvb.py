@@ -261,15 +261,14 @@ Label(frame2,text="Loaded").grid(row=1,column=3,padx=10)
 Label(frame2,textvariable=calAvgLlbl,relief=SUNKEN,width=6).grid(row=2,column=3,padx=10,pady=5)
 Button(frame2,text="Unloaded Calibration",command=calibrationNL).grid(row=1,column=1,padx=5,pady=5,columnspan=2,rowspan=2)
 Button(frame2,text="Loaded Calibration",command=calibrationL).grid(row=1,column=4,padx=5,pady=5,columnspan=2,rowspan=2)
-Label(frame2,text="Calibration distance [in]").grid(row=0,column=0,padx=5,pady=5,sticky=W)
 
+Label(frame2,text="Calibration distance [in]").grid(row=0,column=0,padx=5,pady=5,sticky=W)
 entryL=Entry(frame2,textvariable=calLenght,width=6)
 entryL.grid(row=0,column=1,padx=5,pady=5,columnspan=2,sticky=W)
 entryL.delete(0,END)
 entryL.insert(0,4.75)
 
 Label(frame2,text="Calibration weight [lbf]").grid(row=0,column=3,padx=5,pady=5,sticky=W)
-
 entryW=Entry(frame2,textvariable=calWeight,width=6)
 entryW.grid(row=0,column=4,padx=5,pady=5,columnspan=2,sticky=W)
 entryW.delete(0,END)
