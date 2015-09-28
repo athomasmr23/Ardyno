@@ -1,5 +1,13 @@
 from Tkinter import *
-import matplotlib
+#import matplotlib
+
+from numpy import arange, sin, pi
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
+#import Tkinter as Tk
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
 class Ardyno(Frame):
   
@@ -89,9 +97,10 @@ class Ardyno(Frame):
         Button(RunStopFrame,text="Export").grid(row=2,column=1,padx=5,pady=5,columnspan=2)
         RunStopFrame.pack(padx=10,pady=10)
       
-
-        graphCanvas = Canvas(self.parent)
-        graphCanvas.pack(side=TOP, fill=BOTH)
+        fig=plt.Figure()
+        graphCanvas = FigureCanvasTkAgg(fig, self.parent)
+        graphCanvas.get_tk_widget().grid(column=0,row=0)
+        #graphCanvas.pack(side=TOP, fill=BOTH)
 
         
 
@@ -106,7 +115,7 @@ class Ardyno(Frame):
 def main():
   
     root = Tk()
-    root.geometry("250x150+300+300")
+    root.geometry("600x400+300+300")
     app = Ardyno(root)
     root.mainloop()  
 
